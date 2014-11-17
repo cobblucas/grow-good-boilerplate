@@ -1,0 +1,1627 @@
+/* CSS Document */
+/* Contents
+ 1. CSS Reset, HTML, BODY definitions
+ 2. Link Styles
+ 3. Header Styles
+ 4. Paragraph Styles
+ 5. HR Styles
+ 6. Form Field Styles
+ 7. Blockquote Styles
+ 8. List Styles
+ 9. Table Styles
+10. Image Styles
+11. Custom Classes
+12. BBNC Form Overrides
+13. Clearfix
+14. Page Alignment & Layout Styles
+	14.1 Header Alignment
+	14.2 Line-Height Wrap
+	14.3 Media Alignment
+	14.4 Content Alignment
+	14.5 Footer Alignment
+15. Menu Styles
+16. Admin Fixes
+*/
+
+/* --- 1. CSS RESET, HTML, BODY --- */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, form, label, legend, caption, tbody, tfoot, thead {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+}
+div[id$="pnlPart"] img {
+	z-index:1000;
+}
+#bbAdminMenuDiv {
+	position:relative;
+}
+html {
+	height:100%;
+}
+body {
+	color: $gray;
+	font-family: $font-family-base;
+	font-size : $font-size-base;
+	line-height: $line-height-computed;
+	margin: 0;
+	padding: 0;
+}
+/* BBNC Form Font Size */
+*.BBFormTable {
+	font-size: $font-size-base;
+}
+/* Normalize assorted BBNC form area colors and font sizes */
+*.ListViewEventSubtitle, *.ListViewEventTime, *.ListViewEventLocation, *.BBFormSelectList, *.BBFormTextArea, *.BBFormTextbox, *.DiscussionGroupMessage, *.DiscussionGroupHeadingText, *.BBNotesTextBox, *.EventItemTitleDescription, *.DiscussionTopicListHeader, *.BBMessage, *.BBNotesNoteCell {
+	color: $gray;
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+}
+/* --- 2. LINK STYLES --- */
+
+a, a:link, *.JobBoardSearchLink:link, *.JobBoardPostLink:link, *.JobDetailLink:link, *.JobResultsLink:link, *.DiscussionFooterLink:link, *.DiscussionTopicLink:link, *.BBNameLink:link, *.NewsReaderItemLink, a.ListViewEventTitle:link, *.PagedListFooterLink:link, *.DonationCaptureLink:link, *.PageSharingListItemLink, *.PageSharingListItemLink:link, *.PageSharingListItemLink:visited, *.PageSharingLink:link, a.LoginLink {
+	color: $link-color;
+	text-decoration: $link-hover-decoration;
+}
+a:visited, *.JobBoardSearchLink:visited, *.JobBoardPostLink:visited, *.JobDetailLink:visited, *.JobResultsLink:visited, *.DiscussionFooterLink:visited, *.DiscussionTopicLink:visited, *.BBNameLink:visited, *.NewsReaderItemLink:visited, a.ListViewEventTitle:visited, *.PagedListFooterLink:visited, *.DonationCaptureLink:visited, *.PageSharingLink:visited {
+	color: $link-color;
+	text-decoration: none;
+}
+a:hover, *.JobBoardSearchLink:hover, *.JobBoardPostLink:hover, *.JobDetailLink:hover, *.JobResultsLink:hover, *.DiscussionFooterLink:hover, *.DiscussionTopicLink:hover, *.BBNameLink:hover, *.NewsReaderItemLink:hover, a.ListViewEventTitle:hover, *.PagedListFooterLink:hover, *.DonationCaptureLink:hover, *.PageSharingListItemLink:hover, *.PageSharingLink:hover, *.BBDocumentDisplayHeader:hover {
+	color: $link-color;
+	text-decoration: $link-hover-decoration;
+}
+a:active, *.DonationCaptureLink:active {
+}
+/* Link colors for elements on dark backgrounds */
+a.BBDocumentDisplayHeader, a.BBListingHeadingLink:link {
+	color: #FFF;
+	font-weight: normal;
+}
+a.BBDocumentDisplayHeader:hover, a.BBListingHeadingLink:hover {
+	color: #FFF;
+}
+/* --- 3. HEADER STYLES ---*/ 
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: $gray-base;
+}
+h1 {
+	clear: both;
+	color: $clr-heading;
+	display: block;
+	font-family: $font-family-base;
+	font-size: $font-size-h1;
+	font-weight: bold;
+	line-height: $line-height-computed;
+	margin: 0 0 0.5em;
+	padding: 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+h2, *.BBFormTitle, *.EventCalendarName, table.ReportFormTable legend, *.SurveyTitle, *.SpellFormTitle, *.LoginFormTitle, *.LoginSectionHeader, *.ProfileFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet *.FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.DiscussionGroupFormTitle, *.SearchFormTable *.SearchFormTitle, *.CHFormTitle, *.GivingSearchFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.JobBoardFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.DirectoryFormTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.BBPollsFormTitle, *.BBNotesTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, #contentSidebar *.NewsReaderFormTitle, *.UPMPartEditToolbarTitle, *.DonorGrantListingHeading, *.NCCS_ProductHeaderLine, *.SAE_ChapterManagement_Form_Page_Title {
+	color: $clr-heading;
+	font-family: $font-family-base;
+	font-size: $font-size-h2;
+	font-weight: bold;
+	line-height: $line-height-computed;
+	margin: 0 0 0.5em;
+	padding: 0;
+	text-align: left;
+	text-transform: uppercase;
+}
+/* change margin in H2 to padding for using on table cells within BBNC */
+*.BBFormTitle, *.EventCalendarName, table.ReportFormTable legend, *.SurveyTitle, *.SpellFormTitle, *.LoginFormTitle, *.LoginSectionHeader, *.ProfileFormTitle, *.DonationListingHeading, *.DonationCaptureListingHeading, *.EventSectionHeader, *.FRDonorListSetCaption, *.FRCommentsFieldSet *.FRFieldSetCaption, *.ECardWizardHeading, *.UpcomingEventTitle, *.RecentEventTitle, *.DiscussionGroupFormTitle, *.SearchFormTable *.SearchFormTitle, *.CHFormTitle, *.GivingSearchFormTitle, *.NCC_Forms_Title, *.BBMembershipFormTitle, *.BBDocumentFormTitle, *.JobBoardFormTitle, *.SubscriptionFormTitle, *.BBAnonymousSubscriptionTitle, *.DirectoryFormTitle, *.BBVolOpJobListTitle, *.BBVolOpJobDetailTitle, *.PostChannelStoryFormTitle, *.BBPollsFormTitle, *.BBNotesTitle, *.ReportsLandingTable caption, *.SearchJobHeading, *.JobResultsHeading, #contentSidebar *.NewsReaderFormTitle, *.ClassPageHeaderClassName, *.UPMPartEditToolbarTitle, *.DonorGrantListingHeading {
+	padding: 0.25em 0 0.5em;
+	margin:0;
+}
+*.SurveyTitle {
+	font-size: $font-size-h2;
+}
+/* restyle report title to H1 */
+*.ReportTitle {
+	clear: both;
+	color: $clr-heading;
+	display: block;
+	font-family: $font-family-base;
+	font-size: $font-size-h2;
+	font-weight: bold;
+	line-height: $line-height-computed;
+	text-align: left;
+	text-transform: uppercase;
+	padding:0 !important;
+}
+h3, *.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemTitleName, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.NewsChannelItemTitle, *.NewsChannelItemTitle a, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SurveySubTitle, *.SpellHeading, fieldset *.CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.BBFormDisplaySectionLabel, *.ClassPageHeaderClassName, *.NCCS_ProductName, *.NCCS_sectionheader, *.NCCS_Tributeheader, *.SAE_ChapterManagement_Form_Section_Title {
+	font-family: $font-family-base;
+	margin: 0.25em 0;
+	text-align:left;
+	font-size: $font-size-h3;
+	font-weight:bold;
+	color: $clr-heading;
+	text-transform:none;
+	line-height: $line-height-computed;
+}
+/* change margin in H3 to padding for using on table cells within BBNC */
+*.CalendarFormLegend, *.ListViewDateLabel, *.DetailCaption, *.NewsReaderFormTitle, *.EventItemTitleTime, *.EventItemTitleName, *.EventItemRegistrationsHeader, *.EventItemRegistrantsEventName, *.NewsChannelItemTitle, *.NewsChannelItemTitle a, *.FRSectionHeader, *.FRFieldSetCaption, *.DiscussionGroupHeadingText, *.PostDiscussionReplyHeading, *.PostDiscussionPreviewHeading, *.SurveySubTitle, *.SpellHeading, fieldset *.CHFormTitle, *.CalendarViewTopMiddle, *.ReportListingHeading, *.NCC_Forms_Subtitle, *.DiscussionTopicSubject, *.OCCHeader, *.BBFormDisplaySectionLabel, *.ClassPageHeaderClassName, *.NCCS_sectionheader, *.NCCS_Tributeheader {
+	padding:0.25em 0;
+	margin:0;
+}
+h4, *.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderPageName, *.NCCS_CatalogHeaderRow {
+	font-family: $font-family-base;
+	margin: 0.25em 0;
+	text-align:left;
+	font-size: $font-size-h4;
+	font-weight:normal;
+	color: $clr-heading;
+	line-height: $line-height-computed;
+}
+/* change margin in H4 to padding for using on table cells within BBNC */
+*.DetailEventTitle, *.ListViewEventDate, *.ClassPageHeaderPageName, *.NCCS_CatalogHeaderRow {
+	padding:0.25em 0;
+	margin:0;
+}
+h5, *.ClassPageHeaderTeacherName, *.ClassPageHeaderTeacherEmail {
+	font-family:inherit;
+	margin:0;
+	text-align:left;
+	clear:both;
+	font-size: $font-size-h5;
+	font-weight:bold;
+	color: $clr-heading;
+	line-height: $line-height-computed;
+}
+h6 {
+	font-family:inherit;
+	color: $clr-heading;
+	font-weight:bold;
+	font-size: $font-size-h6;
+	line-height: $line-height-computed;
+	margin:0;
+	text-align:left;
+}
+/* --- 4. PARAGRAPH STYLES --- */
+
+p {
+	margin:0 0 1em;
+}
+/* if @font-face is used, make certain the strong tag is styled to display the bold version of a custom font, not simply a bold on a non-bold font */
+strong {
+}
+/* inserts/deletions */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+/* --- 5. HR STYLES --- */
+
+hr, *.DiscussionMessageSepHR, *.DiscussionTopicSepHR, *.BBMembershipCategoryListStart {
+	border-color: $clr-border;
+	border-style: none none dotted;
+	border-width: 0 0 1px;
+	color: $gray-light;
+	display: block;
+	height: 1px;
+	margin: 0 auto 1em;
+	padding: 0 0 0.5em;
+}
+/* --- 6. FORM FIELD STYLES --- */
+
+select, textarea {
+	font-size: $font-size-base;
+	vertical-align:middle;
+	font-family: $font-family-base;
+	background-color:#FFFFFF;
+	color: $gray-dark;
+}
+input {
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	color: $gray-dark;
+	padding-top:0.25em;
+	padding-bottom:0.25em;
+}
+input[type="text"], input[type="password"], input[type="file"], textarea, select, *.SpellSuggestionList {
+	border:1px solid $clr-border;
+}
+input[type="button"] {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+}
+/* custom button font styles */
+*.BBFormSubmitButton, input[type="button"], .button, *.button:link, *.button:hover, *.NCCS_SearchButton, *.NNCS_FormSubmitButton, *.NCCS_MoreLinkTable_TDR .NCCS_addtocartlink, *.SAE_ChapterManagement_Button, *.BBSequenceMapNavigationButton, a.calloutButton, *.calloutButton a {
+	margin:1em auto;
+	padding:4px 6px;
+	line-height: $line-height-computed;
+	font-family:inherit;
+	font-size: $font-size-base;
+	width:auto;
+	color:#FFF !important;
+	display:inline-block;
+	position:relative;
+	zoom:1;
+	cursor:pointer;
+	text-decoration:none !important;
+	background: $gray-dark; /* for non-css3 browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(top, $gray-dark, $gray-darker); /* for firefox 3.6+ */
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border: 1px solid $clr-border;
+	behavior:url(document.doc?id=1);
+}
+input[type="checkbox"], input[type="radio"] {
+	margin:0 0.5em 0.25em 0;
+	padding:0;
+	vertical-align:middle;
+}
+input.hasDatepicker {
+	margin: 0 0.25em 0 0;
+}
+/* Labels are clickable, we can make this behavior more obvious by setting the cursor to indicate this. */
+label, button, input[type="submit"] {
+	cursor:pointer;
+}
+/* Input fields are clickable and have focus, make this obvious */
+*.BBFormTextbox:focus, *.BBFormTextArea:focus, input[type="text"]:focus {
+	background-color:#ffffff;
+}
+input[type="text"].QuickSearchTextbox:focus {
+}
+/* focus styles */
+:focus {
+	outline: 0;
+}
+/* --- 7. BLOCKQUOTE STYLES --- */
+
+blockquote {
+	margin:0;
+	padding:0;
+}
+blockquote, q {
+	quotes: none;
+	margin: 0 0 0 1em;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+/* --- 8. LIST STYLES --- */
+
+ul, ol {
+	margin: 0 0 1em;
+	padding: 0 0 0 1.5em;
+}
+ul {
+	margin-left:0;
+}
+ul ul {
+	margin-bottom:0;
+}
+ul li {
+	padding: 0;
+}
+ul li a, ul li a:link, ul li a:visited, ul li a:hover {
+}
+ul ul li {
+	padding: 0;
+}
+dl {
+	margin: 0 0 1em 0;
+}
+ol {
+	list-style-type:decimal;
+	margin-left:1.5em;
+}
+ol ol {
+	margin-bottom:0;
+}
+* html ol {
+	margin:0 0 0 0.5em;
+}
+*:first-child+html ol {
+	margin:0 0 0 0.5em;
+}
+ol li ol li {
+	list-style-type:lower-alpha;
+}
+ol li ol li ol li {
+	list-style-type:lower-roman;
+}
+ol li ol li ol li ol li {
+	list-style-type:decimal;
+}
+dt {
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	line-height: $line-height-computed;
+}
+dd {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+/* --- 9. TABLE STYLES --- */
+
+table {
+	font-size: $font-size-base;
+}
+td {
+}
+td.dInlineBlock {
+	display:table-cell;
+}
+/* --- 10. IMAGE STYLES --- */
+
+img {
+	vertical-align:bottom;
+}
+img.ui-datepicker-trigger {
+	vertical-align: middle;
+}
+a img {
+	border: 0 none;
+}
+*.BBLinkHelpIcon img {
+	vertical-align:middle;
+}
+.floatRight {
+	float:right;
+	margin:0 0 0 30px;
+}
+.floatLeft {
+	float:left;
+	margin:0 30px 0 0;
+}
+.imgLeft, .imagefloatLeft {
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid $clr-border;
+	padding:1px;
+	float:left;
+	margin:0 1.5em 1em 0;
+	width:auto;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+.imgRight, .imagefloatRight {
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
+	border-radius:2px;
+	border:1px solid $clr-border;
+	padding:1px;
+	width: auto;
+	margin: 0 0 1.5em 1em; /*Edit as needed */
+	padding:1px;
+	float: right;
+	position: relative;
+	behavior: url(document.doc?id=1);
+}
+.mainPhoto {
+	padding: 2px;
+	border: 1px solid $clr-border;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	behavior:url(document.doc?id=1);
+}
+.media2Col .mainPhoto {
+	-webkit-border-radius: 10px 0 0 10px;
+	-moz-border-radius: 10px 0 0 10px;
+	border-radius: 10px 0 0 10px;
+}
+td.DonationCaptureFieldControlCell img {
+	padding:0 0 2px 5px;
+}
+/* --- 11. CUSTOM CLASSES ---*/
+
+.vaMiddle {
+	vertical-align:middle;
+}
+.taRight {
+	text-align:right;
+}
+.clearFloat {
+	clear: both;
+}
+.displayNone {
+	display:none;
+}
+.noMargin {
+	margin: 0;
+	padding: 0;
+}
+/* callout box styles */
+
+.callout {
+}
+table.callout {
+	width: 221px;
+	border-collapse: collapse;
+	margin-bottom: 25px;
+}
+table.callout th {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-webkit-border-radius: 5px 5px 0 0;
+	-moz-border-radius: 5px 5px 0 0;
+	border-radius: 5px 5px 0 0;
+	height: 27px;
+	color: #ffffff;
+	padding: 0 10px;
+	font-size: 14px;
+	text-align:left;
+	font-weight:normal;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+table.callout td {
+	background: #ffffff;
+	border-width: 0 1px 1px 1px;
+	border-style: solid;
+	border-color: $clr-border;
+	padding:10px 10px 5px;
+	-webkit-border-radius: 0 0 5px 5px;
+	-moz-border-radius: 0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+.calloutButton {
+}
+p.calloutButton {
+	text-align:center;
+}
+/* grouped w/ global Button Styles */
+p.calloutButton span {
+}
+p.calloutButton a, p.calloutButton a:link, p.calloutButton a:visited {
+}
+/* Home Callout */
+
+.calloutTable {
+}
+.calloutImage {
+	vertical-align: top;
+}
+.calloutText {
+	vertical-align: top;
+	padding: 0 0 0 20px;
+	line-height: $line-height-computed;
+}
+*.calloutText h1, *.calloutText h2, *.calloutText h3, *.calloutText h4, *.calloutText h5 {
+	margin: 0;
+}
+/* Title Callouts */
+
+.titleCalloutTable {
+	border-collapse: collapse;
+	width: 100%;
+}
+*.titleCalloutTable .calloutImage .imgBorder {
+	margin-bottom: 0;
+}
+*.calloutHeader{
+}
+*.calloutHeader h3 {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	box-shadow: 0 0 0 1px $gray-light;
+	border: 1px solid $clr-border;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	color: $clr-heading;
+	text-transform: uppercase;
+	height:auto;
+	padding: 9px 13px;
+	text-align:left;
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	font-weight:bold;
+	position: relative;
+	behavior:url(document.doc?id=1);
+	line-height: $line-height-computed;
+}
+.calloutBody {
+	padding: 5px 6px 0 13px;
+}
+/* event table styles */
+
+.eventTable {
+	line-height: $line-height-base;
+}
+.eventDate {
+	text-align:center;
+	vertical-align: top;
+	padding: 0 10px 0 0;
+	width: 40px;
+}
+.eventDate .date {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	box-shadow: 0 0 0 1px $gray-light;
+	border: 1px solid $clr-border;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	padding: 7px;
+	width: 24px;
+	color: #fff;
+	line-height: $line-height-computed;
+	font-weight: bold;
+	text-transform: uppercase;
+	display: block;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+.eventDetails p {
+	margin: 0 0 5px !important;
+}
+.profileDisplay th {
+	text-align: right;
+}
+/* My Home Styles */
+
+*.myHomeBox {
+	border-collapse: separate;
+	margin: 0 0 2em;
+	padding: 0;
+	width:100%;
+	border: 1px solid $clr-border;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+*.myHomeBox th.ProfileDisplayFieldCaption {
+	width: 120px;
+}
+*.myHomeBox td {
+	border-collapse: collapse;
+	font-size: $font-size-base;
+}
+*.myHomeBox td p, *.myHomeBox td h3 {
+	margin: 0;
+	padding: 0;
+}
+/* top styles */
+*.myHomeBox th, *.BBPollsFormTitle {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	color:#FFF;
+	height:auto;
+	padding:0.25em 0.5em;
+	text-transform:none;
+	text-align:center;
+	font-size: $font-family-base;
+	font-family: $font-family-base;
+	font-weight:normal;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+*.myHomeBox th.left {
+	border-color: $clr-border;
+    -webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+	border-radius: 5px 0 0 0;
+    border-style: solid;
+    border-width: 1px 0 0 1px;
+    padding: 0.25em 0;
+    width: 8px;
+}
+*.myHomeBox th.right {
+	border-color: $clr-border;
+    -webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    color: #FFFFFF;
+    text-align: left;
+    width: auto;
+}
+*.BBPollsFormTitle {
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	padding-left: 1.25em;
+	text-align: left;
+	line-height: $line-height-base;
+}
+/* bottom styles */
+*.myHomeBox td.left {
+	background: none repeat scroll 0 0 transparent;
+	padding: 0.5em 0;
+}
+*.myHomeBox td.right {
+	background: none repeat scroll 0 0 transparent;
+	padding: 0.5em 1em 0.5em 0.5em;
+}
+*.profileDisplay {
+	border-collapse:collapse;
+	width:100%;
+}
+*.profileDisplay th {
+	background: none repeat scroll 0 0 transparent;
+	filter:none;
+	color: $gray-dark;
+	font-size: 1em;
+	padding: 0 0.5em 0 0;
+	text-align: right;
+	width: 33%;
+	behavior:none;
+}
+*.profileDisplay td {
+	padding:0;
+}
+/* --- 12. BBNC FORM OVERRIDES ---*/
+
+/* bbnc form border colors */
+
+*.MatchFinderEvenRowStyle, *.MatchFinderOddRowStyle, *.ReportEvenRowStyle, *.ReportOddRowStyle, *.SpellSuggestionList, *.CHFormTable fieldset div, *.DirectoryListingItem, *.ECardSectionSeparator, *.CalendarViewCalendarContainer, *.DetailCaptionContainer, *.EventItemRegistrationsTable tr, *.FRFormTable fieldset div, *.GivingSearchSearchForm, *.JobResultsEvenRowStyle, *.JobResultsOddRowStyle, *.BBMembershipBenefitsGridItem td, *.PaymentPartGrid, *.PaymentPartGrid tr, *.PaymentPartGrid th, *.PaymentPartGrid td, *.PagerContainerTable, *.TransactionManagerGrid, *.TransactionManagerGridHeaderCell, *.CalendarViewCalendarContainer, *.CalendarViewOtherMonthDay, *.CalendarViewDay, *.CalendarViewWeekendDay, *.CalendarViewToday, *.EventAttendeesGrid, *.ProfileFieldControlCell div, *.LoginFormCheckListContainer, *.NewsChannelStoryList, *.ClassPageRosterTable, *.ClassAveragesTable, *.UpcomingAssignmentsTable, *.TeacherAttendanceTable, *.FacultyClassRosterTable, *.ClassScheduleTable, *.TeamScheduleTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.TeamCoachesTable, *.TeamRosterTable {
+	border-color: $gray-light;
+}
+/* bbnc form header row bgcolors and font colors */
+
+*.BBModalDialogTitle, *.CHDashBoardSectionHeading, *.ECardSectionSeparator, *.CalendarViewDayHeader, *.FRDashBoardSectionHeading, *.FRManagerDashBoardSectionHeading, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderRow, *.DirectoryListingHeading, *.DiscussionTopicListHeader td, *.SurveyAnswerTableHeaderRow td, *.BBDocumentDisplayHeaderRow, *.BBDocumentDisplayHeaderRow td, *.JobResultsListHeader, *.BBNotesNoteTopicCell, *.BBNotesNoteNameCell, *.BBNotesNoteLinkCell, *.BBNotesNoteDateCell, *.ReportListingHeading, *.BBVolOpJobListHeader, *.TransactionManagerGridHeaderCell, *.TransactionManagerSummaryHeaderLabel, *.TransactionManagerSummaryHeaderValue, *.SubscriptionFormListHeader, *.BBVolOpJobListHeader td, *.DonationGridHeader td, *.PaymentPartGrid_Header, *.customDataTable th, *.NCCS_CartHeader td, *.NCCS_OrdersHeader td {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	color:#FFF; /* change to match design */
+	padding:0.25em 0.5em;
+	text-align:left;
+	font-weight:normal;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+*.CalendarViewDayHeader {
+	height:auto;
+	text-transform:uppercase;
+	text-align:center;
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	font-weight:normal;
+}
+/* bbnc form shading */
+
+*.BBListEvenRowStyle, *.CHFormTable fieldset div, *.EventAttendeesComplete, *.EventAttendeesCurrent, *.EventAttendeesFuture, *.EventAttendeesGrid, *.EventAttendeesOverallTotal, *.FRDonorListSetCaption, *.FRFormTable fieldset div, *.GivingSearchResultEvenRow, *.GivingSearchSearchForm, *.TransactionManagerDetailsEvenRow, *.TransactionManagerEvenRow, *.TransactionManagerSummaryDetailEvenRow, *.Scroller, #trEmailLists, *.DonationGridEvenRow, *.PaymentPartGrid_EvenRows, *.DiscussionTopicBody, *.UpcomingAssignmentsTable, *.FacultyClassRosterTable, *.StudentRecentlyGradedAssignmentsTable, *.StudentCumulativeGradesTable, *.StudentAttendanceTotalTable, *.StudentAttendanceRecentTable, *.CalendarViewOtherMonthDay, *.customDataTable_rowShade {
+	background-color:#FFFFFF;
+	text-align: left;
+}
+/* custom widths for form elements */
+
+*.FRFormTable fieldset div, *.CHFormTable fieldset div {
+	width:400px;
+}
+fieldset {
+	border:none;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	padding:0;
+	margin:1em 0.5em;
+}
+label {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+}
+fieldset legend {
+	margin-top:1em;
+}
+/* profile display */
+
+*.ProfileDisplayFormTable {
+	width:100%;
+}
+*.ProfileDisplayFieldCaption {
+	width:25%;
+	padding:3px 4px 3px 0;
+}
+*.ProfileDisplayFieldControlCell {
+	width:auto;
+	padding:3px 0;
+}
+/* reports landing table */
+
+*.ReportsLandingTable {
+	border-collapse:collapse;
+	width:100%;
+}
+*.ReportsLandingFieldCaption {
+	padding:0.5em !important;
+	vertical-align:top;
+}
+*.ReportsLandingFieldControlCell {
+	padding:0.5em;
+	vertical-align:top;
+}
+/* reports custom styles */
+
+*.ReportChartCell fieldset legend span {
+}
+*.ReportFormTable td {
+	white-space:normal !important;
+}
+*.ReportFormTable td fieldset div table td div div table td div {
+	width:450px !important;
+	display:block;
+	overflow:auto;
+}
+/* nav buttons */	
+
+*.BBNavBarTable {
+	border-collapse:collapse;
+	clear:both;
+}
+*.BBNavBarTable td {
+	padding:0;
+	text-align:left;
+}
+/* quick search */
+
+table.QuickSearchFormTable {
+	margin: 9px auto 0;
+   	padding: 0;
+   	border-collapse:collapse;
+   	clear:both;
+}
+table.QuickSearchFormTable td {
+	padding:0;
+	text-align:left;
+}
+label.QuickSearchFieldCaption {
+	display:none;
+}
+table.QuickSearchFormTable .QuickSearchTextbox {
+	width: 139px;
+   	height:17px;
+   	border: 1px solid $clr-border;
+   	margin: 0 6px 0 0;
+}
+table.QuickSearchFormTable .QuickSearchButton {
+	background-color:$gray-light;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to($gray-light)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 0px none;
+  	font-size: $font-size-base;
+   	color: $gray-dark !important;
+   	font-weight: bold;
+   	width: 65px;
+   	height: 24px;
+   	padding: 0 0 4px;
+   	cursor: pointer;
+   	margin: 0px;
+	position: relative;
+	behavior:url(document.doc?id=1);
+	line-height: $line-height-base;
+}
+/* event registration form */
+
+*.EventProgressCell {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	color:#FFF; /* change to match design */
+	font-weight:normal;
+	border-bottom:3px solid $gray-darker;
+	border-radius:10px 10px 0 0;
+	font-family:inherit;
+	font-size: $font-size-base;
+	height:auto;
+	line-height: $line-height-computed;
+	padding:0.5em 1%;
+	text-align:center;
+	white-space:nowrap;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+/* form display */
+
+*.BBSequenceMapCurrentStepItem {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	color:#FFF; /* change to match design */
+	font-weight:normal;
+	border-bottom:3px solid $gray-darker;
+	border-radius:10px 10px 0 0;
+	font-family:inherit;
+	font-size: $font-size-small;
+	height:auto;
+	padding: 0.5em 0.5em 0.25em;
+	text-align:center;
+	white-space:nowrap;
+	position: relative;
+	behavior:url(document.doc?id=1);
+	line-height: $line-height-computed;
+}
+
+/*--- 13. CLEARFIX---*/
+
+*.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+*.clearfix {
+	display: inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+*.clearfix {
+	display: block;
+}
+/* End hide from IE-mac */
+
+/* --- 14. GLOBAL PAGE ALIGNMENT & LAYOUT STYLES --- */
+
+#BodyId {
+	background-color: $body-bg;
+}
+*.container {
+}
+/* --- 14.1. HEADER ALIGNMENT --- */
+
+*.bodyGutter {
+	width:900px;
+	margin: 0 auto;
+}
+#wrapHeader {
+	position: relative;
+	z-index: 2;
+}
+#header { /* header gradient */
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to($gray-darker)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, $gray-darker) repeat scroll 0 0 transparent;
+	position: relative;
+	border-bottom: 1px solid $clr-border;
+	behavior:url(document.doc?id=1);
+}
+#header .bodyGutter {
+	position:relative;
+}
+#headerLogo {
+	padding: 28px 0;
+	float:left;
+	width: 234px;
+}
+#headerUtility {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from($gray-dark), to(#02508D)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, $gray-dark, #02508D) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, $gray-dark, #02508D) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, $gray-dark, #02508D) repeat scroll 0 0 transparent;
+	color: #fff;
+	padding: 17px 10px 24px;
+	position:absolute;
+	top:0;
+	bottom:1px;
+	right:0;
+	width: auto;
+	behavior:url(document.doc?id=1);
+}
+#wrapNav {
+	background-color:$gray-light;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to($gray-light)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, #FFFFFF, $gray-light) repeat scroll 0 0 transparent;
+	position: relative;
+	line-height: normal;
+	border-bottom: 1px solid $clr-border;
+    box-shadow: 0 4px 4px 0 #E8E8E8;
+	behavior:url(document.doc?id=1);
+}
+#wrapNav img {
+	vertical-align: baseline;
+}
+/* --- 14.2. LINE HEIGHT GUTTER --- */
+
+/* The lineHeightWrap class is to allow the containing div * that do not contain content, but have a set width, to collapse in IE. */
+
+*.mediaPrimary, *.mediaSecondary, *.calloutPrimary, *.calloutSecondary, *.calloutCenter {
+	line-height: 0;
+}
+*.mediaPrimary .lineHeightWrap, *.mediaSecondary .lineHeightWrap, *.calloutPrimary .lineHeightWrap, *.calloutCenter .lineHeightWrap, *.calloutSecondary .lineHeightWrap, *.threeColumns .lineHeightWrap {
+	line-height: $line-height-base;
+	padding: 0;
+	margin: 0;
+}
+/* --- 14.3. MEDIA ALIGNMENT --- */
+
+#wrapMedia {
+	background: #fff url(view.image?id=412) repeat-x 0 0;
+	padding-top: 15px;
+	position: relative;
+	z-index: 1;
+}
+#media {
+	width: 902px;
+	margin: 0 auto;
+}
+*.media2Col {
+	width: 902px;
+	margin: 0 auto;
+}
+*.mediaPrimary {
+	width: 595px;
+	float: left;
+}
+*.mediaSecondary {
+	width: 303px;
+	float: right;
+}
+/* media menu */
+
+*.mediaMenu {
+	background-color:$gray-dark;
+	background: -moz-linear-gradient(top, $gray-darker 0%, $gray-darker 10%, $gray-dark 50%, $gray-dark 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gray-darker), color-stop(10%,$gray-darker), color-stop(50%,$gray-dark), color-stop(100%,$gray-dark)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* IE10+ */
+	background: linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* W3C */
+	-pie-background: linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%) repeat scroll 0 0 transparent;
+	-webkit-border-radius: 0 10px 10px 0;
+	-moz-border-radius: 0 10px 10px 0;
+	border-radius: 0 10px 10px 0;
+	position: relative;
+	width: 274px;
+	height: 235px;
+	padding: 12px 14px;
+	margin: 0;
+	list-style: none;
+	list-style-position: inside;
+	behavior:url(document.doc?id=1);
+}
+*.mediaMenu li {
+	background-color: $gray-darker;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	display:block;
+	margin-bottom: 1px;
+	width: 274px;
+	float: left;
+	position: relative;
+	behavior:url(document.doc?id=1);
+}
+*.mediaMenu li:hover {
+	background-color: $gray-dark;
+}
+*.mediaMenu li a, *.mediaMenu li a:link, *.mediaMenu li a:visited {
+	display: block;
+	padding: 14px 34px;
+	color: #ffffff !important;
+	text-transform: uppercase;
+	font-size: $font-size-base;
+	font-weight: bold;
+	text-decoration: none;
+	line-height: $line-height-base;
+}
+*.mediaMenu li:hover a, *.mediaMenu li.hover a, *.mediaMenu li:hover a:hover, *.mediaMenu li.hover a:hover {
+	display: block;
+	color: #fdb813 !important;
+}
+*.mediaMenu li a:hover {
+	background: url(view.image?id=552) no-repeat 15px 19px;
+}
+*.mediaMenu li a, *.mediaMenu li a:link, *.mediaMenu li a:visited {
+	background: url(view.image?id=551) no-repeat 15px 19px;
+}
+/*--- 14.4. CONTENT ALIGNMENT ---*/
+
+#wrapContentOuter {
+	background: #fff;
+}
+#wrapContentInner {
+	width: 900px;
+	margin: 0 auto;
+}
+*.contentGutter {
+	padding: 0 36px;
+}
+#contentPrimary a {
+	font-weight:bold;
+	text-decoration:underline;
+}
+div#home #contentPrimary {
+	line-height: $line-height-base;
+	width:900px;
+	margin: 0 auto;
+}
+div#home #contentPrimary .gutter {
+	padding: 10px 15px;
+}
+div#internal #contentPrimary {
+	float: right;
+	width: 620px;
+	margin:15px 0 0 0;
+}
+div#internal #contentPrimary .leftCol {
+	width: 48%;
+	float: left;
+	margin: 0;
+}
+div#internal #contentPrimary .rightCol {
+	width:48%;
+	float:right;
+	margin: 0;
+}
+div#internal #contentPrimary .singleCol {
+	clear:both;
+	width: 100%;
+	margin: 0;
+}
+div#internal #contentPrimary .gutter {
+	padding: 15px 0 15px 0;
+}
+
+/* homepage callouts */
+
+*.calloutPrimary {
+	width: 565px;
+	float:left;
+}
+*.calloutPrimary h1, *.calloutPrimary h2, *.calloutSecondary h1, *.calloutSecondary h2, *.calloutCenter h1 {
+	margin-bottom: 15px;
+	margin-top: 12px;
+}
+*.calloutSecondary {
+	width: 285px;
+	float: right;
+}
+*.calloutSecondary p, *.threeColumns p {
+	padding: 0 0 1em 0;
+}
+*.calloutCenter {
+	clear:both;
+	width: 885px;
+}
+*.threeColumns {
+	width: 870px;
+	clear: both;
+}
+*.threeColLeft {
+	float: left;
+	width: 285px;
+	margin-right: 8px;
+}
+*.threeColCenter {
+	float: left;
+	width: 285px;
+}
+*.threeColRight {
+	float: right;
+	width: 285px;
+}
+/* secondary content area */
+
+#contentSecondary {
+	background: $gray-lighter;
+	border: $clr-border solid 2px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: relative;
+	behavior: url(document.doc?id=1);
+}
+div#home #contentSecondary {
+	width: 896px;
+	margin: 0 auto 15px;
+	color: $gray-dark;
+	font-size: $font-size-small;
+	display: none;
+}
+div#internal #contentSecondary {
+	float: left;
+	width:250px;
+	margin: 28px 0;
+}
+div#internal #contentSecondary h2 {
+	background-color:#E2E2E2;
+	background: -moz-linear-gradient(top, #E2E2E2 0%, #E2E2E2 90%, #D0D0D0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E2E2E2), color-stop(90%,#E2E2E2), color-stop(100%,#D0D0D0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #E2E2E2 0%,#E2E2E2 90%,$gray-dark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #E2E2E2 0%,#E2E2E2 90%,$gray-dark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #E2E2E2 0%,#E2E2E2 90%,$gray-dark 100%); /* IE10+ */
+	background: linear-gradient(top, #E2E2E2 0%,#E2E2E2 90%,$gray-dark 100%); /* W3C */
+	-pie-background: linear-gradient(top, #E2E2E2 0%,#E2E2E2 90%,$gray-dark 100%) repeat scroll 0 0 transparent;
+	position: relative;
+	color: #333;
+	padding: 12px 0 12px 12px;
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+	behavior: url(document.doc?id=1);
+}
+div#internal #contentSecondary table.callout {
+	width: auto;
+}
+*.gutter {
+	padding: 15px;
+}
+div#internal #contentSub {
+    float: left;
+    margin: 0 0 28px 0;
+    width: 250px;
+    clear: left;
+}
+/*--- 14.5. FOOTER ALIGNMENT ---*/
+
+#wrapFooter {
+	background-color:$gray-dark;
+	background: -moz-linear-gradient(top, $gray-darker 0%, $gray-darker 10%, $gray-dark 50%, $gray-dark 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$gray-darker), color-stop(10%,$gray-darker), color-stop(50%,$gray-dark), color-stop(100%,$gray-dark)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* IE10+ */
+	background: linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%); /* W3C */
+	-pie-background: linear-gradient(top, $gray-darker 0%,$gray-darker 10%,$gray-dark 50%,$gray-dark 100%) repeat scroll 0 0 transparent;
+	position: relative;
+	color: #fff;
+	behavior: url(document.doc?id=1);
+}
+#wrapFooterMenu {
+	padding:0.5em 0;
+}
+#wrapFooter h3 {
+	color: #fff;
+	font-size: $font-size-h3;
+	font-weight: bold;
+	text-align: right;
+}
+*.footerMenuWrap {
+	margin: 20px 0;
+	float:left;
+}
+*.footerContactWrap {
+	border-right: #033c6a solid 1px;
+	margin: 20px 0;
+	float: right;
+	text-align:right;
+	width: 300px;
+}
+*.footerContactBorderWrap {
+	border-right: #015494 solid 1px;
+	padding-right: 20px;
+	height: 70px;
+	width: auto;
+	float: right;
+}
+*.footerContactWrap p, #wrapFooterCopy p {
+	padding: 0;
+}
+#wrapFooterCopy {
+	background-color:$gray-dark;
+	padding: 5px 0;
+	text-align:center;
+}
+/* Footer Contact Wrap */
+
+*.footerContactWrap a:link, *.footerContactWrap a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+*.footerContactWrap a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+*.footerContactWrap a:active {
+	text-decoration: none;
+}
+/*--- 15. Menu 2.0 STYLES ---*/
+
+/* list based menu*/
+
+*.utilityMenuList {
+	list-style: none;
+	list-style-position: outside;
+	margin: 0 auto;
+	padding: 0;
+}
+*.utilityMenuList li {
+	display: inline;
+	width: auto;
+}
+*.utilityMenuList li a {
+	color: #ffffff !important;
+	text-decoration:none;
+	padding: 0 6px 0 7px;
+	border-right: 1px solid $clr-border;
+	line-height: $line-height-base;
+}
+*.utilityMenuList li.last a {
+	border: 0 none;
+}
+/* =utility menu */
+
+#headerUtility .mainMenu {
+	margin: 0 auto;
+	padding: 0;
+	border-collapse:collapse;
+}
+#headerUtility .mainMenu a {
+	color: #fff;
+	text-decoration:none;
+	padding: 0 3px 0;
+}
+/* Main Menu List Based */
+
+#wrapNav .mainNav {
+	margin:0;
+	list-style: none;
+	list-style-position: outside;
+	padding: 0;
+}
+#wrapNav .mainNav li {
+	position: relative;
+	float: left;
+	padding: 0;
+	text-align:center;
+	border-right: 1px solid $clr-border;
+	height: 45px;
+	behavior:url(document.doc?id=1);
+}
+#wrapNav .mainNav li.last {
+	border: 0 none;
+}
+#wrapNav .mainNav li a {
+	font-size:14px;
+	color: $gray-dark;
+	font-weight:bold;
+	padding:14px 15px;
+	text-transform:uppercase;
+	text-decoration: none;
+	display: block;
+}
+#wrapNav .mainNav li:hover a, #wrapNav .mainNav li.hover a {
+	color: $gray-base
+}
+#wrapNav .mainNav li:hover, #wrapNav .mainNav li.hover {
+	background-color:$gray-dark;
+	background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to($gray-dark)); /* for webkit browsers */
+	background: -moz-linear-gradient(center top, #FFFFFF, $gray-dark) repeat scroll 0 0 transparent;
+	background: linear-gradient(center top, #FFFFFF, $gray-dark) repeat scroll 0 0 transparent;
+	-pie-background: linear-gradient(center top, #FFFFFF, $gray-dark) repeat scroll 0 0 transparent;
+}
+/* List Sub Menus */
+
+#wrapNav .mainNav .nccUlMenuSub1 {
+	position: absolute;
+	left: -50000px;
+	list-style: none;
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+}
+#wrapNav .mainNav li:hover .nccUlMenuSub1, #wrapNav .mainNav li.hover .nccUlMenuSub1 {
+	top: 45px;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	width: 206px;
+	border: 1px solid $clr-border;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li {
+	background-color: #ffffff;
+	float: left;
+	text-align: left;
+	border-bottom: 1px solid $clr-border;
+	width:206px;
+	height:auto;
+	padding:0;
+	margin: 0;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li.last {
+	border-right: 1px solid $clr-border;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li a {
+	font-family: inherit;
+	font-size: $font-size-small;
+	text-transform: none;
+	display: block;
+	padding: 5px;
+	background-color: #ffffff;
+	text-align: left;
+	color: $gray-dark;
+	text-decoration: none;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li:hover, #wrapNav .mainNav li .nccUlMenuSub1 li:hover a, #wrapNav .mainNav li .nccUlMenuSub1 li.hover, #wrapNav .mainNav li .nccUlMenuSub1 li.hover a {
+	color: #ffffff;
+	background: $gray-dark;
+}
+/* List 2nd Sub */
+
+*.nccUlMenuSub2 {
+	position: absolute;
+	left: -50000px;
+	list-style: none;
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+}
+*.nccUlMenuSub2 li {
+	padding: 0;
+	margin: 0;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li:hover .nccUlMenuSub2, #wrapNav .mainNav li .nccUlMenuSub1 li.hover .nccUlMenuSub2 {
+	left: 207px;
+	top: 0;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li:hover .nccUlMenuSub2 li a, #wrapNav .mainNav li .nccUlMenuSub1 li.hover .nccUlMenuSub2 li a {
+	background-color: #ffffff;
+	color: $gray-dark;
+}
+#wrapNav .mainNav li .nccUlMenuSub1 li .nccUlMenuSub2 li:hover, #wrapNav .mainNav li .nccUlMenuSub2 li:hover a, #wrapNav .mainNav li .nccUlMenuSub1 li .nccUlMenuSub2 li.hover, #wrapNav .mainNav li .nccUlMenuSub1 li .nccUlMenuSub2 li.hover a {
+	color: #ffffff;
+	background: $gray-dark;
+}
+/* main Menu */
+
+#wrapNav .mainMenu {
+	margin:0;
+}
+#wrapNav .mainMenuItem td {
+	padding: 17px 0 16px;
+	text-align:center;
+	background: transparent;
+}
+#wrapNav .mainMenuItem a /*, #wrapNav .mainMenuItem a:link, #wrapNav .mainMenuItem a:visited */ {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	color: $gray-dark;
+	text-decoration:none;
+	padding:0 15px;
+	border-right:1px solid $clr-border !important;
+	text-transform:uppercase;
+}
+#wrapNav .mainMenuHover td {
+	background: #fff url(view.image?id=411) repeat-x 0 100%;
+}
+#wrapNav .mainMenuHover td a, #wrapNav .mainMenuHover td a:link, #wrapNav .mainMenuHover td a:visited {
+	border-right:0px none !important;
+	padding:0 16px 0 15px;
+	color:#fff;
+}
+/* Sub Menu */
+
+#wrapNav .subMenu table {
+	width: 206px;
+	border: 1px solid $clr-border;
+}
+#wrapNav .subMenu table td {
+	border-bottom: 1px solid $clr-border;
+	width:206px;
+}
+#wrapNav .subMenu table.subMenuItem {
+	border: 0 none;
+}
+#wrapNav .subMenuItem td a, #wrapNav .subMenuItem td a:link, #wrapNav .subMenuItem td a:visited {
+	display: block;
+	padding: 5px;
+	text-align: left;
+	color: $gray-dark;
+	text-decoration: none;
+}
+#wrapNav .subMenuHover td a, #wrapNav .subMenuHover td a:link, #wrapNav .subMenuHover td a:visited {
+	color: #ffffff;
+	background: $gray-dark;
+}
+#wrapNav .subMenu .subMenuItem td {
+	border: 0 none;
+}
+/* Internal Menu Style */
+
+/* List Based */
+
+*.internalMenu, *.internalMenu ul {
+	margin:0;
+	padding: 0;
+	list-style-type: none;
+	list-style-position: outside;
+}
+*.internalMenu li:hover, *.internalMenu li.hover, *.internalMenu li.selected {
+}
+*.internalMenu li a {
+	display:block;
+	padding: 2px 0 2px 29px;
+	text-decoration: none;
+	background-position:12px 6px;
+	background-repeat:no-repeat;
+}
+*.internalMenu li a, .internalMenu li:hover li a, .internalMenu li.hover li a, .internalMenu li.selected li a {
+	background-color:transparent;
+	background-image:url(view.image?id=499);
+}
+*.internalMenu li li a {
+	padding: 2px 0 2px 49px;
+	background-position:32px 6px;
+}
+*.internalMenu li.selected a, .internalMenu li li.selected a {
+	background-image:url(view.image?id=500);
+}
+*.internalMenu li:hover a, .internalMenu li.hover a {
+	color: #ffffff;
+	background-color:$gray-dark;
+	background-image:url(view.image?id=498);
+}
+*.internalMenu li:hover li a, .internalMenu li.hover li a {
+	color:$gray-dark;
+}
+*.internalMenu li:hover li:hover a, .internalMenu li.hover li.hover a {
+	background-color: $gray-lighter;
+	background-image:url(view.image?id=498);
+	color:$gray-dark;
+}
+*.internalMenu li:hover ul.nccUlMenuSub1 {
+	background: transparent;
+}
+/* table based */
+
+#contentSecondary .mainMenu {
+	width:100%;
+}
+#contentSecondary .mainMenuItem a, #contentSecondary .mainMenuItem a:link, #contentSecondary .mainMenuItem a:visited {
+	display:block;
+	background: url(view.image?id=499) no-repeat 12px 5px;
+	padding: 2px 0 2px 29px;
+	text-decoration: none;
+}
+#contentSecondary .mainMenuSelected a, #contentSecondary .mainMenuSelected a:link, #contentSecondary .mainMenuSelected a:visited, #contentSecondary .mainMenuSelected a:hover {
+	background: url(view.image?id=500) no-repeat 12px 4px;
+	color: $gray-darker;
+}
+#contentSecondary .mainMenuHover a, #contentSecondary .mainMenuHover a:link, #contentSecondary .mainMenuHover a:visited, #contentSecondary .mainMenuHover a:hover {
+	background-color: $gray-darker;
+	color: #ffffff;
+	background-image:url(view.image?id=498);
+	background-repeat:no-repeat;
+	background-position:12px 4px;
+}
+/* footer menu */
+
+*.footerMenu {
+	border-left: $clr-border solid 1px;
+	height: 70px;
+	list-style: none;
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+	float: left;
+	width: auto;
+}
+*.footerMenu li {
+	border-right: $clr-border solid 1px;
+	border-left: $clr-border solid 1px;
+	float: left;
+	padding: 0 20px 0;
+	margin: 0;
+}
+*.footerMenu li.last {
+	border-right: 0 none;
+}
+*.footerMenu li a {
+	color: #ffffff!important;
+	text-decoration: none;
+	font-size: $font-size-base;
+	font-weight: bold;
+}
+*.footerMenu li:hover a, *.footerMenu li:hover a:hover, *.footerMenu li.hover a, *.footerMenu li.hover a:hover {
+	cursor: default;
+}
+*.footerMenu .nccUlMenuSub1 {
+	list-style: none;
+	list-style-position: outside;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+*.footerMenu li .nccUlMenuSub1 li {
+	float: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+*.footerMenu li .nccUlMenuSub1 li a {
+	text-decoration: underline;
+	font-size: $font-size-small;
+	font-weight: normal;
+}
+*.footerMenu li .nccUlMenuSub1 li:hover a, *.footerMenu li .nccUlMenuSub1 li:hover a:hover, *.footerMenu li .nccUlMenuSub1 li.hover a, *.footerMenu li .nccUlMenuSub1 li.hover a:hover {
+	cursor: pointer;
+}
+#wrapFooterMenu .footerMenu a {
+	position: static;
+}
+
+/* --- 16. ADMIN FIXES --- */
+
+div[id$="designPaneCloak"] {
+	left: 0 !important;
+}
+#contentSub div.DesignPane ~ img {
+ 	display:none;
+}
+/* skip link styles */
+
+a.skip {
+	position: absolute;
+	top: -50em;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+a.skip:hover, a.skip:active, a.skip:focus {
+	position: absolute;
+	left: 50%;
+	top: 0;
+	background: #fff;
+	padding: .5em;
+	text-align: center;
+	margin: 0 auto 0 -10em;
+	display: block;
+	width: 20em;
+}
+/* ie opacity fix */
+
+*.iefix {
+	/* IE hack */
+	background:none\9; /* Targets IE only */
+ filter:progid:DXImageTransform.Microsoft.AlphaImageLoader();
+}
+/* Admin View Fix */
+
+*.contentPageDesigner {
+	background-color:#FFFFFF;
+	border: 1px solid $clr-border;
+	left: 0;
+	min-height:500px;
+	padding:10px 0;
+	position:relative;
+	top:30px;
+	width: 100% !important;
+}
+table.DesignMenuTable a {
+	color: $gray !important;
+}

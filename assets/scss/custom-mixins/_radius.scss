@@ -1,0 +1,17 @@
+// Full border-radius
+
+@mixin full-radius($radius) {
+	border-radius: $radius;
+}
+@mixin btr-radius($radius) {
+	border-radius: $radius $radius 0 0;
+}
+@mixin bbr-radius($radius) {
+	border-radius: 0 $radius $radius 0;
+}
+@mixin btl-radius($radius) {
+	border-radius: $radius 0 0 $radius;
+}
+@mixin bbl-radius($radius) {
+	border-radius: 0 0 $radius $radius;
+}
